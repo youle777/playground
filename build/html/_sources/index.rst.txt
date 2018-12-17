@@ -10,6 +10,8 @@ Welcome to Playground Blog's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   blog_menu
+
 
 
 Indices and tables
