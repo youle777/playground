@@ -1,6 +1,13 @@
+
+按主题阅读
+====================================
+
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: 按主题阅读
+   :numbered: 2
 
-   001_book
-   002_book
+
+   001_book.rst
+   002_book.rst

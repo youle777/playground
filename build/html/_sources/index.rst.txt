@@ -3,31 +3,29 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Playground Blog's documentation!
-===========================================
+
+
+学习成长乐园
+====================================
+.. note::
+
+    这里是Youle的学习成长乐园，欢迎交流与指教。
+
 目录:
 ^^^^^
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 按主题阅读
-
+   :maxdepth: 3
+   :glob:
 
    topic/index
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: 按作者阅读
-
    author/index
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: ORID记录
-
    orid/index
+
+
+
+
+
 
 
 

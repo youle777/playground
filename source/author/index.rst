@@ -1,6 +1,13 @@
-.. toctree::
-   :maxdepth: 2
-   :caption: 按作者阅读
 
-   simon
-   stanovich
+
+按作者阅读
+====================================
+
+
+
+.. toctree::
+   :maxdepth: 3
+   :numbered: 2
+
+   simon.rst
+   stanovich.rst
