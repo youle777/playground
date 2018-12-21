@@ -5,12 +5,29 @@
 
 Welcome to Playground Blog's documentation!
 ===========================================
+目录:
+^^^^^
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 按主题阅读
 
-   blog_menu
+
+   topic/index
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 按作者阅读
+
+   author/index
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ORID记录
+
+   orid/index
 
 
 
