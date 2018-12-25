@@ -10,3 +10,4 @@ ORID记录
 
 
    001_note
+   002_note
