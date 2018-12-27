@@ -48,6 +48,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -86,8 +87,9 @@ pygments_style = None
 html_theme = 'alabaster'
 
 import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
+html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -118,25 +120,32 @@ htmlhelp_basename = 'PlaygroundBlogdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
+# 注：在生成html的时候这句话要注释
+# latex_engine = 'xelatex'
 
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
 
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
+latex_elements={# The paper size ('letterpaper' or 'a4paper').
+'papersize':'a4paper',# The font size ('10pt', '11pt' or '12pt').
+'pointsize':'12pt','classoptions':',oneside','babel':'',#必须
+'inputenc':'',#必须
+'utf8extra':'',#必须
+# Additional stuff for the LaTeX preamble.
+'preamble': r'''
+\hypersetup{unicode=true}
+\usepackage{CJKutf8}
+\DeclareUnicodeCharacter{00A0}{\nobreakspace}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
+\DeclareUnicodeCharacter{2713}{x}
+\DeclareUnicodeCharacter{27FA}{\ensuremath{\Longleftrightarrow}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\sqrt{}}}
+\DeclareUnicodeCharacter{221B}{\ensuremath{\sqrt[3]{}}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\begin{CJK}{UTF8}{gbsn}
+\AtEndDocument{\end{CJK}}
+''',}
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
