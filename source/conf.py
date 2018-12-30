@@ -48,8 +48,14 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-
+    
 ]
+
+# index - master document
+# rst2pdf - name of the generated pdf
+# Sample rst2pdf doc - title of the pdf
+# Your Name - author name in the pdf
+pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Your Name'),]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['playgroundtemplates']
@@ -133,7 +139,7 @@ latex_elements={# The paper size ('letterpaper' or 'a4paper').
 'preamble': r'''
 \hypersetup{unicode=true}
 \usepackage{CJKutf8}
-\DeclareUnicodeCharacter{00A0}{\nobreakspace}
+\DeclareUnicodeCharacter{00A0}{\\nobreakspace}
 \DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
 \DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
 \DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
@@ -143,7 +149,7 @@ latex_elements={# The paper size ('letterpaper' or 'a4paper').
 \DeclareUnicodeCharacter{221B}{\ensuremath{\sqrt[3]{}}}
 \DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
 \DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
-\begin{CJK}{UTF8}{gbsn}
+\\begin{CJK}{UTF8}{gbsn}
 \AtEndDocument{\end{CJK}}
 ''',}
 # Grouping the document tree into LaTeX files. List of tuples
